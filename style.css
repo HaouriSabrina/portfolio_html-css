@@ -1,0 +1,381 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* SPINNER */
+.spinner {
+    position: fixed;
+    z-index: -1;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    animation: overlay 2s 0s;
+    opacity: 0;
+}
+  
+.spinner:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #a6cfd56b;
+}
+
+.spinner:after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 50px solid white;
+    border-color: plum transparent #E56399 transparent;
+    animation: spinner 3s linear 1;
+}
+  
+@keyframes spinner {
+    0% {
+        transform: rotate(0);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    50% {
+        transform: rotate(900deg);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    100% {
+        transform: rotate(1800deg);
+        transform: scale(0);
+    }
+}
+
+@keyframes overlay {
+    
+    0% {
+        opacity: 1;
+        z-index: 2;
+    }
+
+    99% {
+        opacity: 1;
+        z-index: 2;
+    }
+
+    100% {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+/* Mise en page */
+
+body {
+    background-color: #ece2d06c;
+}
+
+header {
+    height: 400px;
+    background-image: url(images/Banniere.jpg);
+    background-attachment: fixed;
+    box-shadow: 10px 5px 5px grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h1,
+h2, 
+h3, 
+h4 {
+    font-family: 'Nanum Pen Script', cursive;
+    font-weight: normal;
+    color: #E56399;
+}
+
+h1 {
+    font-size: 110px;
+    color: black;
+}
+
+h2 {
+    font-size: 60px;
+}
+
+h3 {
+    margin: 3% auto;
+    font-size: 40px;
+    border: 2px solid white;
+    background-color: white;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 10px 5px 5px grey;
+}
+
+h4 {
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    margin:2%;
+    position: fixed;
+}
+
+.nav-icon{
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    background: #E56399;
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+}
+
+a:hover {
+    background-color: #A6CFD5;
+    color: #6b85fa;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10%;
+    transition: 300ms;
+    
+}
+
+a>p {
+    display: none;
+}
+
+a:hover>p {
+    display: block;
+}
+
+#block-description>h2 {
+    color: #E56399;
+}
+
+#block-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3%;
+}
+#description {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.description>img {
+    height: 30%;
+    border-radius: 10%;
+    border: 2px solid #A6CFD5;
+    margin: 3%;
+    box-shadow: 10px 5px 5px grey;
+}
+
+.description>p {
+    margin: 5%;
+}
+
+.skills {
+    margin: 0 auto;
+    width: 60%;
+}
+
+/* BARRE DE  SKILLS */
+.n1,
+.n2,
+.n3,
+.n4,
+.n5,
+.n6,
+.n7,
+.n8,
+.n9 {
+    height: 30px;
+    border: 2px solid rgb(179, 175, 175);
+    background-color: #E56399;
+    color: white;
+    box-shadow: 10px 5px 5px grey;
+    
+}
+.progress {
+    width: 80%;
+    background: #6b85fa;
+}
+
+.parcours {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.parcours>div {
+    margin: 4% 0 4% 0;
+}
+.quote {
+    font-style:italic;
+    font-weight: bold;
+    color: black ;
+}
+
+.formation>p {
+    margin: 2%;
+}
+.experiences {
+    margin: 5%;
+}
+.experiences>p {
+    margin: 2%;
+}
+
+.experiences>h4 {
+    text-decoration: none;
+    font-size: 25px;
+    color: #7F96FF;
+}
+
+#footer {
+    height: 650px;
+    background-image: url(images/footer.png);
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer>a {
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 20px;
+    margin: 2%;
+}
+ul {
+    list-style: none;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+}
+
+.fab {
+    font-size: 50px;
+    color: #6b85fa;
+}
+
+#img-contact>img {
+    max-width: 30%;
+    height: auto;
+}
+
+.logo>a {
+    text-decoration: none;
+    background: none;
+    border-radius: 100%;
+    height: 50px;
+    width: 40px;
+    line-height: 40px;
+}
+
+.logo>a:hover {
+    background-color: none;
+    color: #6b85fa;
+    width: auto;
+    height: auto;
+    display: block;
+}
+
+.red {
+    color: #6b85fa;
+    font-weight: bold;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 70px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+    
+    h3 {
+        background-color: #E56399;
+        font-size: 30px;
+        color: white;
+        margin: 10% auto;
+        width: 200px;
+    }
+
+    h4 {
+        font-size: 25px;
+    }
+
+    header {
+        background-image: url(images/plume.jpg);
+    }
+
+    nav {
+        display: none;
+    }
+
+    #description {
+        width: 100%;
+    }
+
+    .description>img {
+        height: 300px;
+        width: auto;
+    }
+
+    .parcours {
+        width: 100%;
+    }
+
+    #img-contact>img {
+        max-width: 40%;
+        height: auto;
+    }
+
+    .experiences>h4 {
+        font-size: 20px;
+    }
+
+    .who {
+        color: #6b85fa;
+    }
+
+    .quote {
+        margin: 2%;
+    }
+
+}
