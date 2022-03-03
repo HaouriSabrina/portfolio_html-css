@@ -85,7 +85,7 @@ body {
 
 header {
     height: 400px;
-    background-image: url(images/Banniere.jpg);
+    background-image: url(images/banniere.jpg);
     background-attachment: fixed;
     box-shadow: 10px 5px 5px grey;
     display: flex;
